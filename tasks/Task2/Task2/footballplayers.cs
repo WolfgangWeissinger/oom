@@ -28,7 +28,7 @@ namespace Task2
             }
         }
 
-        public footballplayer(string newname, string newnationality, int newgoals)
+        public footballplayer(string newname, string newnationality, int newgoals=0)
         {
             name = newname;
             nationality = newnationality;
@@ -38,8 +38,13 @@ namespace Task2
         
         public void UpdateGoals(int newgoals)
         {
-            if (newgoals < goals) goals = newgoals;
+            if (newgoals > goals) goals = newgoals;
             else throw new Exception();
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{0}, {1}, {2}", this.name, this.nationality, this.goals);
         }
     }
 }

@@ -15,8 +15,11 @@ namespace Task2
             var ronaldo = new footballplayer("ronaldo", "POR");
             var messi = new footballplayer("messi", "ARG");
             Console.WriteLine("Nationalitaet Ronaldo: {0}", ronaldo.nationality);
+            Console.WriteLine("{0}", messi);
+
             int tore = 200;
-            
+            messi.UpdateGoals(tore);
+            Console.WriteLine("{0}", messi);
         }
     }
 }
