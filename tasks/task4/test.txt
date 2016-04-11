@@ -1,0 +1,1 @@
+{"Name":"SkyKids","Price_weekdays":73.0,"Price_weekends":79.0,"Price_48h":119.0,"prop_weight":0}

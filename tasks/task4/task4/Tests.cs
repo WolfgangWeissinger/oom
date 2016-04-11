@@ -15,19 +15,19 @@ namespace task3._1
         public void Weekday_Price_Compare_with_Initialization()
         {
             var x = new RentalObjects_bouncer("Babytreff", 36, 39, 59, 10);
-            Assert.IsTrue(x.prop_price_weekdays == 36);
+            Assert.IsTrue(x.Price_weekdays == 36);
         }
         [Test]
         public void Weekend_Price_Compare_with_Initialization()
         {
             var x = new RentalObjects_bouncer("Babytreff", 36, 39, 59, 10);
-            Assert.IsTrue(x.prop_price_weekends == 39);
+            Assert.IsTrue(x.Price_weekends == 39);
         }
         [Test]
         public void F48h_Price_Compare_with_Initialization()
         {
             var x = new RentalObjects_bouncer("Babytreff", 36, 39, 59, 10);
-            Assert.IsTrue(x.prop_price_48h == 59);
+            Assert.IsTrue(x.Price_48h == 59);
         }
         [Test]
         public void No_negative_price_weekdays()
@@ -58,7 +58,7 @@ namespace task3._1
 
             Assert.Catch(() => {
                 
-                y.price_calculation_delivery(y.prop_price_weekdays, -3); });
+                y.price_calculation_delivery(y.Price_weekdays, -3); });
         }
         [Test]
         public void Atleast_one_day_booking_pickup()
@@ -67,7 +67,7 @@ namespace task3._1
 
             Assert.Catch(() => {
 
-                y.price_calculation_pickup(y.prop_price_weekdays, -3);
+                y.price_calculation_pickup(y.Price_weekdays, -3);
             });
         }
 
